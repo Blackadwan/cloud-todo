@@ -14,6 +14,24 @@ firebase.initializeApp(firebaseConfig);
 // Firebase services
 const auth = firebase.auth();
 const db = firebase.firestore();
+auth.onAuthStateChanged(user => {
+  if (user) {
+    function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .catch(error => alert(error.message));
+}
+
+  } else {
+    // User is logged out
+    function logout() {
+  auth.signOut();
+}
+
+  }
+});
 
 
 // ✅ Register new user
