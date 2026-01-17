@@ -1,30 +1,75 @@
+/* General page style */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
     text-align: center;
+    color: #fff;
 }
 
+/* Inputs */
 input {
-    padding: 8px;
-    margin: 5px;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
+input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    transform: scale(1.03);
+}
+
+/* Buttons */
 button {
-    padding: 8px 12px;
-    margin: 5px;
+    padding: 10px 16px;
+    margin: 6px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s;
 }
 
+button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* List */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* List items */
 li {
-    background: white;
-    padding: 10px;
-    margin: 5px auto;
-    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 12px 15px;
+    margin: 10px auto;
+    width: 320px;
+    border-radius: 12px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
